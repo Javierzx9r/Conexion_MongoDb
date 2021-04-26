@@ -160,6 +160,31 @@ def del_coleccion():
 
 
 
+def Usuarios():
+    print (a)
+
+    db.createUser({
+
+            user: "lector",
+            pwd: "123456",
+            roles: [
+                {
+                    role: "read",
+                    db: (a)
+                }
+            ]
+        }
+    )
+
+
+
+
+
+
+
+
+
+
 menu = False
 
 while not menu:
@@ -172,7 +197,7 @@ while not menu:
     print ("5.- EDICION DE DOCUMENTOS")
     print ("6.- ELIMINAR COLECCION")
     print ("7.- ELIMINAR BD")
-    print ("8.- SALIR")
+    print ("8.- CREAR USUARIOS")
 
 
     op = int(input("\nEscoja una opción...: "))
@@ -200,6 +225,9 @@ while not menu:
         del_base_datos()
 
     elif op == 8:
+        Usuarios()
+
+    elif op == 9:
         menu=True
 
     else:
