@@ -65,7 +65,6 @@ def crear_coleccion():
 
     global coleccion
 
-
     coleccion = db[(col)] # CREO LA COLECCIÓN EN LA BASE DE DATOS "PRUEBA"
 
     print ("\nNueva colección creada en la base de datos "+str(a) + "  con nombre " + str(col) + "\nNo se mostrará hasta que no tenga un documento")
@@ -160,8 +159,11 @@ def del_coleccion():
 
 
 
-def Usuarios():
-    print (a)
+def gestion_User():
+
+
+    db = client.Javier
+
 
     db.createUser({
 
@@ -225,7 +227,7 @@ while not menu:
         del_base_datos()
 
     elif op == 8:
-        Usuarios()
+        gestion_User()
 
     elif op == 9:
         menu=True
